@@ -16,31 +16,32 @@ package ch12.exceptions.exercise;
  */
 public class Ex10 {
     public static void main(String[] args) {
-        f();
-    }
-
-    private static void f() {
+        Ex10 ce = new Ex10();
         try {
-            g();
-        } catch (G1Exception e) {
-            e.printStackTrace();
-            throw new H1Exception("f()抛出异常");
+            ce.f();
+        } catch (AnotherException e) {
+            System.out.println("Caught " + e);
         }
     }
 
-    private static void g() throws G1Exception {
-        throw new G1Exception("g()抛出异常");
+    public void g() throws An2Exception {
+        throw new An2Exception();
+    }
+
+    public void f() throws AnotherException {
+        try {
+            g();
+        } catch (An2Exception e) {
+            throw new AnotherException();
+        }
     }
 }
 
-class G1Exception extends Exception {
-    G1Exception(String s) {
-        super(s);
-    }
+class AnException extends Exception {
 }
 
-class H1Exception extends RuntimeException {
-    H1Exception(String s) {
-        super(s);
-    }
+class AnotherException extends Exception {
 }
+/* Output:
+Caught exceptions.AnotherException
+*///:~

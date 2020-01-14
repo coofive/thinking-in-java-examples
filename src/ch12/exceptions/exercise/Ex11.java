@@ -12,5 +12,26 @@ package ch12.exceptions.exercise;
  *
  * @author wenwu.liu.o
  */
+
 public class Ex11 {
+    public static void main(String[] args) {
+        Ex11 ce = new Ex11();
+        ce.f();
+    }
+
+    public void f() {
+        try {
+            g();
+        } catch (An2Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void g() throws An2Exception {
+        throw new An2Exception();
+    }
 }
+
+class An2Exception extends Exception {
+}
+///:~
