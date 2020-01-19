@@ -11,7 +11,7 @@ public class ExceptionSilencer {
         } finally {
             // Using 'return' inside the finally block
             // will silence any thrown exception.
-            return;
+//            return;
         }
     }
 } ///:~

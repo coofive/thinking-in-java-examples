@@ -141,16 +141,4 @@ interface Storm {
     void rainHard() throws RainedOut;
 }
 
-
-interface A {
-    void test() throws IOException, PrintException;
-}
-
-class B implements A {
-    @Override
-    public void test() throws FileNotFoundException {
-
-    }
-}
-
 ///:~
