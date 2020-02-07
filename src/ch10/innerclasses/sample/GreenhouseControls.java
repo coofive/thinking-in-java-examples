@@ -120,7 +120,7 @@ public class GreenhouseControls extends Controller {
     }
 
     /**
-     * An example of an action() that inserts a
+     * An sample of an action() that inserts a
      * new one of itself into the event list:
      */
     public class Bell extends Event {
