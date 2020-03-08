@@ -229,6 +229,7 @@ public class Countries {
         private static Set<Map.Entry<String, String>> entries =
                 new EntrySet(DATA.length);
 
+        @Override
         public Set<Map.Entry<String, String>> entrySet() {
             return entries;
         }

@@ -9,3 +9,7 @@
 - [x] exceptions
 
   > Error Handling with Exceptions
+  
+- [x] arrays
+
+  > Arrays

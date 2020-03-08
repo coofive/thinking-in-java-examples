@@ -14,12 +14,13 @@ public class CountingMapData extends AbstractMap<Integer, String> {
                     .split(" ");
 
     public CountingMapData(int size) {
-        if (size < 0) this.size = 0;
+        if (size < 0) {
+            this.size = 0;
+        }
         this.size = size;
     }
 
-    private static class Entry
-            implements Map.Entry<Integer, String> {
+    private static class Entry implements Map.Entry<Integer, String> {
         int index;
 
         Entry(int index) {
