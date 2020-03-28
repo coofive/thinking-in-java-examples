@@ -1,4 +1,4 @@
-//: typeinfo/pets/Dog.java
+//: typeinfo/pets/DogsAndRobots.cpp
 package ch11.holding.sample.pets;
 
 /**
